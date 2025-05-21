@@ -5,7 +5,7 @@ This repository documents my SQL learning journey from the YouTube course
 
 ## 📚 Topics Covered
 
-1. [Introduction to Databases](01-introduction-to-databases.md)
+1. [Introduction to Databases](introduction-to-databases.md)
 2. [SQL Overview and Setup](02-sql-overview-and-setup.md)
 3. [Creating Databases and Tables](03-creating-databases-and-tables.md)
 4. [SQL Data Types](04-sql-datatypes.md)
