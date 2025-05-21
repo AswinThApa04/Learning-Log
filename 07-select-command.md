@@ -1,5 +1,6 @@
-```sql
 # SELECT Command in Detail
+```sql
+
 CREATE DATABASE XYZ;
 USE XYZ;
 CREATE TABLE info(
@@ -15,4 +16,6 @@ values
 SELECT * FROM info;
 SELECT DISTINCT id FROM info;
 SELECT id,name FROM info;
+
+
 - Filtering, Aliasing, Sorting to be added later
