@@ -1,4 +1,4 @@
-```markdown
+```sql
 # SELECT Command in Detail
 CREATE DATABASE XYZ;
 USE XYZ;
