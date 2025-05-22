@@ -13,6 +13,7 @@ This repository documents my SQL learning journey from the YouTube course
 6. [CRUD Operations](06-crud-operations.md)
 7. [SELECT Command](07-select-command.md)
 8. [Keys and Constraints](08-keys-and-constraints.md)
+9. [Clauses and Aggregate Functions](09-clauses-and-aggregate-functions.md)
 
 ---
 
