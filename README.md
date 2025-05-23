@@ -14,7 +14,7 @@ This repository documents my SQL learning journey from the YouTube course
 7. [SELECT Command](07-select-command.md)
 8. [Keys and Constraints](08-keys-and-constraints.md)
 9. [Clauses and Aggregate Functions](09-clauses-and-aggregate-functions.md)
-
+10. [Advanced SQL Topics](10-advanced-topics.md)
 ---
 
 ## 🎯 Goal
