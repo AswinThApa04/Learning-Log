@@ -25,33 +25,37 @@ CREATE TABLE marks (
   ON UPDATE CASCADE
 );
 ```
-### ALTER, ADD, DROP, RENAME, CHANGE, MODIFY, TRUNCATE
-## ADD Column:
+## ALTER, ADD, DROP, RENAME, CHANGE, MODIFY, TRUNCATE
+### ADD Column:
 ```sql
 ALTER TABLE students ADD COLUMN age INT;
 ```
-## DROP Column:
+### DROP Column:
 ```sql
 ALTER TABLE students DROP COLUMN age;
 RENAME Table:
 ```
 
-## RENAME Table
+### RENAME Table
 ```sql
 ALTER TABLE students RENAME TO student_data;
 ```
 
-## MODIFY Column (change datatype/constraint)
+### MODIFY Column (change datatype/constraint)
 ```sql
 ALTER TABLE students MODIFY name VARCHAR(100);
 ```
 
-## CHANGE Column (rename + change datatype):
+### CHANGE Column (rename + change datatype):
 ```sql
 ALTER TABLE students CHANGE name full_name VARCHAR(100);
 ```
-## TRUNCATE Table
+### TRUNCATE Table
 ```sql
 TRUNCATE TABLE students;
 ```
+
+## 🔗 Joins in SQL
+### 1. INNER JOIN
+Returns only matching records from both tables.
 
