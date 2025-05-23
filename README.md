@@ -1,7 +1,7 @@
 # SQL-Learning-Log
 
 
-This repository documents my SQL learning journey from the YouTube course 
+This repository documents my SQL learning journey 
 
 ## 📚 Topics Covered
 
