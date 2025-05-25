@@ -7,7 +7,6 @@
 **Definition:**  
 Encapsulation is the process of **wrapping data (attributes) and methods (functions)** into a single unit — a **class**.
 
-> 🔄 Formula:  
 > `Data Properties + Member Functions = Encapsulation`
 
 ### ✅ Purpose:
