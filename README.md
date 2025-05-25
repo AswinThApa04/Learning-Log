@@ -22,6 +22,8 @@ This repository documents my daily learning journey in core technical topics inc
 1. [Classes and Objects](OOPS/01-classes-and-objects.md)
 2. [Encapsulation and Constructors](OOPS/02-encapsulation-and-constructors.md)
 3. [This Pointer and Copy Constructor](OOPS/03-this-pointer-and-copy-constructor.md)
+4. [Constructor-and-Destructor](OOPS/04-copy-constructor-and-destructor.md)
+5. [Inheritance and Polymorphism](OOPS/05-inheritance-and-polymorphism.md)
 
 
 ---
