@@ -7,7 +7,7 @@ This repository documents my daily learning journey in core technical topics inc
 ## 📚 Topics Covered
 
 ### 🔷 SQL
-1. [Introduction to Databases](SQL/introduction-to-databases.md)
+1. [Introduction to Databases](SQL/01-introduction-to-databases.md)
 2. [SQL Overview and Setup](SQL/02-sql-overview-and-setup.md)
 3. [Creating Databases and Tables](SQL/03-creating-databases-and-tables.md)
 4. [SQL Data Types](SQL/04-sql-datatypes.md)
@@ -19,9 +19,9 @@ This repository documents my daily learning journey in core technical topics inc
 10. [Advanced SQL Topics](SQL/10-advanced-topics.md)
 
 ### 🔶 Object-Oriented Programming (C++)
-1. [Classes and Objects](oops/01-classes-and-objects.md)
-2. [Encapsulation and Constructors](oops/02-encapsulation-and-constructors.md)
-3. [This Pointer and Copy Constructor](oops/03-this-pointer-and-copy-constructor.md)
+1. [Classes and Objects](OOPS/01-classes-and-objects.md)
+2. [Encapsulation and Constructors](OOPS/02-encapsulation-and-constructors.md)
+3. [This Pointer and Copy Constructor](OOPS/03-this-pointer-and-copy-constructor.md)
 
 
 ---
