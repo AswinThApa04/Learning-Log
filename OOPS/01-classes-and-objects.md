@@ -87,7 +87,7 @@ public:
 ```
 🔄 Why use Setter & Getter?
 We use setters to assign values to private members, and getters to access their values indirectly.
-🔐 Can't access salary directly
-✅ But can use setSalary() and getSalary() to interact with it
+- 🔐 Can't access salary directly
+- ✅ But can use setSalary() and getSalary() to interact with it
 
 
