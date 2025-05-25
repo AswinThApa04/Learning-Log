@@ -7,7 +7,7 @@ This repository documents my daily learning journey in core technical topics inc
 ## 📚 Topics Covered
 
 ### 🔷 SQL
-1. [Introduction to Databases](SQL/ introduction-to-databases.md)
+1. [Introduction to Databases](SQL/introduction-to-databases.md)
 2. [SQL Overview and Setup](SQL/02-sql-overview-and-setup.md)
 3. [Creating Databases and Tables](SQL/03-creating-databases-and-tables.md)
 4. [SQL Data Types](SQL/04-sql-datatypes.md)
