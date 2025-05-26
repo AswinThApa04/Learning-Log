@@ -24,6 +24,7 @@ This repository documents my daily learning journey in core technical topics inc
 3. [This Pointer and Copy Constructor](OOPS/03-this-pointer-and-copy-constructor.md)
 4. [Constructor-and-Destructor](OOPS/04-copy-constructor-and-destructor.md)
 5. [Inheritance and Polymorphism](OOPS/05-inheritance-and-polymorphism.md)
+6. [Abstraction and Static Keyword](06-abstraction-and-static.md)
 
 
 ---
