@@ -18,6 +18,7 @@ This repository documents my daily learning journey in core technical topics inc
 9. [Clauses and Aggregate Functions](SQL/09-clauses-and-aggregate-functions.md)
 10. [Advanced SQL Topics](SQL/10-advanced-topics.md)
 11. [Normalization](SQL/11-normalization.md)
+12. [Additional Topics](SQL/12-Indexes-Views-Transactions+ACID-Triggers-Basic ER model understanding.md)
 
 ### 🔶 Object-Oriented Programming (C++)
 1. [Classes and Objects](OOPS/01-classes-and-objects.md)
