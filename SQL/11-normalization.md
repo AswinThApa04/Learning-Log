@@ -1,4 +1,4 @@
-# 11 - SQL Normalization (In-Depth)
+# SQL Normalization (In-Depth)
 
 ---
 
