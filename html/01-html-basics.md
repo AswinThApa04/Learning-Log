@@ -97,6 +97,5 @@ tag
 
 - Use formatting tags for better display
 
-- <head> and <body> are children of <html>
 
 ---
