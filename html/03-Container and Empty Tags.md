@@ -75,7 +75,7 @@ Empty tags:
 | `<source>` | Media source in audio/video tags              |
 
 ## 🧪 Example Code
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,3 +117,4 @@ Empty tags:
 
 </body>
 </html>
+```
