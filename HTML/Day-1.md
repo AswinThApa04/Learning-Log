@@ -117,3 +117,103 @@
   </body>
 </html>
 ```
+# HTML Forms & Mini Project
+
+## 1. The Form Container
+- `<form>` → The main tag that wraps all form elements together.
+
+---
+
+## 2. Labels and Inputs
+- `<label>` → Visible text description for a field (e.g., “Username”).  
+- `<input>` → The actual field where the user enters data.  
+- **Connection:** Use `id` on `<input>` and `for` on `<label>` with the same value (important for accessibility).  
+
+---
+
+## 3. Common Input Types
+- `type="text"` → Single-line text input.  
+- `type="password"` → Hidden characters when typing.  
+- `type="email"` → For email addresses (helps with validation and correct mobile keyboard).  
+
+---
+
+## 4. Multi-line Input
+- `<textarea>` → Used for longer, multi-line input (comments, messages, etc.).  
+
+---
+
+## 5. Submitting the Form
+- `<button type="submit">` → Submits the form’s data.  
+
+---
+
+## 📝 Practice Code – *Contact Form*
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Form</title>
+</head>
+<body>
+    <form>
+        <h2>Contact Us</h2>
+      
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="user_email">
+      
+        <br><br>
+      
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="user_message"></textarea>
+      
+        <br><br>
+      
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
+```
+---
+## 🚀 Mini Project – Personal Bio Page
+A small project combining everything I’ve learned so far: headings, lists, links, images, and semantic HTML.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MINI PROJECT (PERSONAL BIO PAGE)</title>
+</head>
+<body>
+    <header>
+        <h1>Aswin Thapa</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About Me:</h2>
+            <img src="https://cdn.vectorstock.com/i/preview-1x/64/17/user-account-circle-glyph-color-icon-vector-28806417.jpg" alt="User Photo">
+            <p>Hello Everyone. This is Aswin Thapa. Currently hooked into web development things and gradually upskilling myself in this field. Join this journey with me where I turn myself into a developer in the coming days.</p>
+        </section>
+
+        <section>
+            <h2>My Skills and Hobbies</h2>
+            <ul>
+                <li>Play Guitar.</li>
+                <li>Play Valo and shit talk with the boys.</li>
+                <li>Solve Coding Problems.</li>
+            </ul>
+            <p>
+                <a href="https://aswinthapa04.github.io/portfolio-website/">Portfolio Website</a>
+                <br><a href="https://leetcode.com/u/aswinthapa/">Leetcode</a>
+                <br><a href="https://www.linkedin.com/in/aswin-thapa/">LinkedIn</a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025, Aswin Thapa</p>
+    </footer>
+</body>
+</html>
+```
