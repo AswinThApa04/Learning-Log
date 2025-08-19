@@ -28,8 +28,11 @@ This repository documents my daily learning journey in core technical topics inc
 5. [Inheritance and Polymorphism](OOPS/05-inheritance-and-polymorphism.md)
 6. [Abstraction and Static Keyword](06-abstraction-and-static.md)
 
+### 🟦 HTML & CSS
+1. [Day 1 – HTML Basics](HTML/Day-1.md)
 
 ---
+
 
 ## 🎯 Goal
 
