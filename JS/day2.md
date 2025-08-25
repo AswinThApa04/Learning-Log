@@ -88,7 +88,7 @@ greetAndCheckVotingAge(person2);
 ## Working with Arrays of Objects
 Objects are often stored inside arrays. This is very common for representing lists of data, like a list of users.
 ### Assignment #4: Filtering an Array of Objects
--Task: Create a function that takes an array of user objects and returns a new array containing only the males who are older than 18.
+- Task: Create a function that takes an array of user objects and returns a new array containing only the males who are older than 18.
 ```javascript
 const users = [{
     name: "Aswin",
