@@ -121,3 +121,95 @@ function findAdultMales(userArray) {
 const result = findAdultMales(users);
 console.log(result);
 ```
+## Synchronous vs. Asynchronous JavaScript
+
+Today's focus was on how JavaScript executes code, especially when dealing with time-consuming operations like reading files.
+
+### Synchronous Code Execution
+
+Synchronous code is executed line by line, in the order it's written. Each operation must wait for the previous one to complete before the next one can start. Most of the basic JavaScript I've written so far has been synchronous.
+
+**Example: A CPU-Bound Task**
+A task that is limited by the CPU's speed is **CPU-bound**. This `for` loop is a good example because the CPU is doing intense work and is the bottleneck.
+```javascript
+// This function calculates the sum of numbers from 1 to n.
+// Note: The loop condition is i <= n to correctly include n in the sum.
+function sum(n) {
+    let ans = 0;
+    for (let i = 1; i <= n; i++) {
+        ans = ans + i;
+    }
+    return ans;
+}
+
+// The code waits for sum(100) to finish before starting sum(1000), and so on.
+const ans1 = sum(100);
+console.log(ans1);
+const ans2 = sum(1000);
+console.log(ans2);
+```
+### Utility Learned: parseInt()
+The `parseInt()` function is useful for converting a string into an integer, ensuring that mathematical operations work as expected.
+`let result = parseInt("20") + 3; // result is 23`
+
+---
+
+## Asynchronous Code & The File System (fs)
+Asynchronous code allows JavaScript to start a long-running task (like reading a file) and continue executing other code without waiting for it to finish. This is key for building fast, non-blocking applications.
+
+A great way to practice this is with the Node.js File System module (fs).
+
+- To use this module, you must first import it: const fs = require('fs');
+
+**1.**  Synchronous File Reading: `readFileSync`
+This function reads a file and blocks the rest of the code from executing until the file is fully read.
+```javascript
+const fs = require('fs');
+
+// The program pauses here until a.txt is read.
+const contents = fs.readFileSync("a.txt", "utf-8");
+console.log(contents);
+
+console.log("This message will only appear after the file is read.");
+```
+- Note on `utf-8`: This encoding is crucial. Without it, Node.js returns the raw data as a `<Buffer ...>`, not as a human-readable string.
+**2.** Asynchronous File Reading: `readFile`
+This function starts reading a file and does not block execution. It uses a callback function that runs only after the file has been successfully read.
+```javascript
+const fs = require('fs');
+
+// The file reading process starts, but the code below runs immediately.
+fs.readFile("a.txt", "utf-8", function (err, contents) {
+    // This callback function runs once the file is read.
+    // 'contents' holds the file data.
+    console.log(contents);
+});
+
+console.log("This message will likely appear BEFORE the file contents.");
+```
+---
+## I/O-Bound vs. CPU-Bound Tasks
+This was a key concept for understanding when to use asynchronous code.
+
+- CPU-Bound: A task limited by the CPU's processing speed (e.g., complex calculations, a massive loop).
+
+- I/O-Bound (Input/Output): A task limited by waiting for an external resource, like a disk or a network. The CPU is mostly idle during this time.
+
+**Why Asynchronous is Better for I/O**
+If you have multiple I/O tasks, the asynchronous approach is far more efficient.
+
+**Synchronous (Slow):** Each file is read one after the other.
+```javascript
+// Reads a.txt, waits, then reads b.txt, waits, etc.
+const contents1 = fs.readFileSync("a.txt", "utf-8");
+console.log("File A read.");
+const contents2 = fs.readFileSync("b.txt", "utf-8");
+console.log("File B read.");
+```
+**Asynchronous (Fast):** You can start reading all files at once. They will finish when they finish, without blocking each other.
+```javascript
+// All three file-reading operations start at roughly the same time.
+fs.readFile("a.txt", "utf-8", (err, contents) => { console.log("File A contents are ready.") });
+fs.readFile("b.txt", "utf-8", (err, contents) => { console.log("File B contents are ready.") });
+fs.readFile("c.txt", "utf-8", (err, contents) => { console.log("File C contents are ready.") });
+```
