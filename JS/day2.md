@@ -213,3 +213,96 @@ fs.readFile("a.txt", "utf-8", (err, contents) => { console.log("File A contents 
 fs.readFile("b.txt", "utf-8", (err, contents) => { console.log("File B contents are ready.") });
 fs.readFile("c.txt", "utf-8", (err, contents) => { console.log("File C contents are ready.") });
 ```
+---
+
+##  Functions as Arguments
+
+A core concept in JavaScript is that functions are "first-class citizens." This means they can be treated like any other variable—stored, returned, or, most importantly, passed as arguments to other functions.
+
+**Example: A Calculator Function**
+I created a single function, `doOperation`, that takes two numbers and a third argument, `op`, which is expected to be a function itself. This allows `doOperation` to be a flexible calculator.
+```javascript
+function sum(a, b) {
+    return a + b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function doOperation(a, b, op) {
+    return op(a, b);
+}
+
+// Here, we pass the `sum` function as an argument.
+console.log(doOperation(1, 2, sum));       // Output: 3
+// We could also pass the `multiply` function.
+console.log(doOperation(1, 2, multiply));  // Output: 2
+```
+### Callbacks in Action
+The concept of passing functions as arguments is the foundation of *callbacks*. A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+This is especially important for asynchronous operations, like reading a file.
+```javascript
+const fs = require('fs');
+
+// This is our callback function.
+// It handles both the error and the data when the file is read.
+function onFileRead(err, data) {
+    if (err) {
+        console.log("Error reading file:", err);
+    } else {
+        console.log(data);
+    }
+}
+
+// We pass the `onFileRead` function as the callback to `fs.readFile`.
+// JavaScript will execute it *later*, once the file has been read.
+fs.readFile("a.txt", "utf-8", onFileRead);
+fs.readFile("b.txt", "utf-8", onFileRead);
+
+console.log("done");
+```
+The output is `done`, then the contents of `a.txt`, then `b.txt`. This is because `fs.readFile` is asynchronous. It starts the task but doesn't wait for it to finish. The main thread continues, logs `"done"`, and only when the file operations are complete do their callbacks get executed.
+---
+### The Event Loop: How Async JS Really Works
+To understand why callbacks are executed later, I learned about the JavaScript runtime environment.
+
+A key experiment was running a `setTimeout` (an I/O-bound task provided by the browser/Node.js) alongside a heavy, synchronous `for` loop (a CPU-bound task).
+```javascript
+console.log("Hi!");
+
+// This is an async Web API function.
+setTimeout(function timeOut() {
+    console.log("Click the button");
+}, 1000); // 1-second delay
+
+console.log("Welcome to the loupe");
+
+// This is a heavy, synchronous, CPU-bound task.
+let c = 0;
+for (let i = 0; i < 1000000000; i++) {
+    c = c + 1;
+}
+console.log("Expensive operation finished");
+
+// Correct Output Order:
+// 1. Hi!
+// 2. Welcome to the loupe
+// 3. Expensive operation finished
+// 4. Click the button
+```
+---
+The "Click the button" message logs last, even after the long `for` loop, because the main thread was blocked by the CPU-intensive task. The `setTimeout` callback had to wait in a queue until the main thread was free.
+
+This process is managed by four key components:
+
+- Call Stack: Keeps track of the functions currently being executed (Last In, First Out).
+
+- Web APIs: Features provided by the browser or Node.js environment (like `setTimeout`, `fs.readFile`, DOM events) that run outside of the main JavaScript thread.
+
+- Callback Queue: A queue where completed asynchronous tasks (their callbacks) wait to be executed.
+
+- Event Loop: The orchestrator. Its job is to constantly check: "Is the call stack empty?" If it is, the event loop takes the first item from the callback queue and pushes it onto the call stack to be run.
+---
+
