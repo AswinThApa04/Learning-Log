@@ -1,6 +1,6 @@
-# 📘 JavaScript Notes – Inbuilt Classes & Promises
+#  JavaScript Notes – Inbuilt Classes & Promises
 
-## 🧩 Inbuilt JavaScript Classes
+##  Inbuilt JavaScript Classes
 
 ### 1. `Map`
 The **`Map`** class in JavaScript allows you to store **key-value pairs** similar to objects, but with more flexibility and built-in methods.
