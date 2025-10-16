@@ -185,7 +185,7 @@ setInterval(callback, 1000);
 ```
 ### Explanation
 
-- `querySelectorAll("h4")[1]` selects the second <h4> element.
+- `querySelectorAll("h4")[1]` selects the second `<h4>` element.
 
 - Its content updates every second using setInterval().
 
