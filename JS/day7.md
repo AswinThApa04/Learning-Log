@@ -57,11 +57,13 @@ This page is static — no changes occur unless a user reloads or interacts via 
 
 ---
 ## 4. The document Object
+
 - In browsers, the document object represents the webpage currently loaded.
 - It provides methods to access, read, and modify HTML elements dynamically.
-
 ---
+
 ## 5. Selecting Elements
+
 a) `querySelector()`
 Selects the first matching element.
 ```js
@@ -105,7 +107,9 @@ document.querySelectorAll("h4")[1]; // Second
 document.querySelector("#todo4");
 document.getElementById("todo4");
 ```
+
 Both methods select the element with the given ID.
+
 ---
 ## 6. Using Classes
 ```html
