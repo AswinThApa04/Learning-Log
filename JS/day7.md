@@ -75,12 +75,13 @@ console.log(inputEl);
 const h1Elem = document.querySelector("h1");
 console.log(h1Elem.innerHTML);
 ```
-This logs the content inside the <h1> tag.
+This logs the content inside the `<h1>` tag.
+
 2) Another example:
 ```js
 document.querySelector("button").innerHTML;
 ```
-Fetches the text inside the <button> element.
+Fetches the text inside the `<button>` element.
 
 b) `querySelectorAll()`
 
