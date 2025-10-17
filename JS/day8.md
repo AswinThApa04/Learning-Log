@@ -17,7 +17,6 @@ The foundation is a simple HTML file with an `input` for the user to type in, a 
         <button onclick="addTodo()">Add Todo!</button>
     </body>
     <script>
-        // JavaScript code goes here
     </script>
 </html>
 ```
