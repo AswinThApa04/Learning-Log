@@ -79,3 +79,59 @@ function deleteTodo(index){
 - `document.getElementById()`: To find the specific to-do div that needs to be deleted.
 
 - `.parentNode.removeChild()`: The standard way to remove an element from the DOM.
+
+---
+
+## Understanding `.class` vs `#id` in HTML, CSS, and JavaScript
+
+### 1. The Basics
+In HTML, we can assign identifiers to elements in two ways:
+```html
+<h1 id="mainTitle">Hello</h1>
+<p class="highlight">Welcome!</p>
+```
+### 2. In CSS
+
+To target a class, use a dot `(.)` before the class name.
+
+To target an ID, use a hash `(#)` before the ID name.
+
+```css
+/* Styling a class */
+.highlight {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Styling an ID */
+#mainTitle {
+  color: red;
+  text-transform: uppercase;
+}
+```
+*Use classes when you want to style multiple elements the same way.*
+*Avoid using multiple elements with the same ID — each ID should be unique on the page.*
+
+### 3. In JavaScript (DOM Manipulation)
+
+You can select and manipulate elements differently based on whether they’re a class or ID:
+```js
+// Selecting by ID
+const title = document.getElementById("mainTitle");
+title.innerHTML = "Hello DOM!";
+
+// Selecting by class
+const items = document.getElementsByClassName("highlight");
+items[0].style.color = "green";
+```
+Or, using querySelector / querySelectorAll (modern and flexible):
+```js
+document.querySelector("#mainTitle").style.color = "purple"; // # for id
+document.querySelector(".highlight").style.fontSize = "20px"; // . for class
+```
+### 4. Rule of Thumb
+| Use Case                                      | Selector     | Example      | When to Use                                             |
+| --------------------------------------------- | ------------ | ------------ | ------------------------------------------------------- |
+| Style or select **one unique element**        | `#idName`    | `#header`    | For unique items like header, footer, or main container |
+| Style or select **multiple similar elements** | `.className` | `.todo-item` | For groups of items, buttons, list elements, etc.       |
+
