@@ -95,7 +95,7 @@ app.get('/ride2', (req, res) => {
   res.json({ message: "You have successfully rode the ride2" });
 });
 ```
-*Note: Middleware order matters — routes declared before app.use() won’t use it.*
+*Note: Middleware order matters — routes declared before `app.use()` won’t use it.*
 ---
 ## Assignment 1 — Global Request Counter
 Create a global middleware that tracks how many requests have been made.
