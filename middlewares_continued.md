@@ -26,7 +26,7 @@ When frontend (e.g., localhost:5000) tries to request backend (localhost:3000):
 
 **Why CORS exists?**
 To prevent malicious websites from secretly sending requests to other servers using your browser cookies.
---- 
+
 
 ### Using CORS Middleware
 Install & enable CORS:
